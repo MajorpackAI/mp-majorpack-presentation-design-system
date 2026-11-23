@@ -1,0 +1,87 @@
+/* Majorpack presentation system. No remote resources or bundled font files. */
+:root {
+  --mp-orange:#D43E17; --mp-grey:#3A373B; --mp-white:#FFFFFF;
+  --mp-light:#F4F2EE; --mp-dark:#141518; --mp-heading:#1C1A1D;
+  --mp-muted:#6C686E; --mp-soft:#F5A48B; --mp-wash:#FCF1EC;
+  --mp-sage:#9B9D8F; --mp-blue:#76A1C0;
+  --mp-font:Arial,sans-serif;
+}
+/* Set --mp-font to Aeroport only when legitimately available in the renderer. */
+* {box-sizing:border-box}
+html,body {margin:0; background:#27272a; font-family:var(--mp-font); color:var(--mp-grey)}
+main {display:grid; gap:28px; padding:28px; justify-items:center}
+.slide {width:1920px; height:1080px; position:relative; overflow:hidden; background:var(--mp-light); padding:66px 96px 112px; flex:none}
+.slide.dark {background:var(--mp-dark); color:white}
+.topic {height:80px; display:flex; align-items:center; gap:22px; margin-bottom:26px}
+.topic .no {font-size:66px; color:var(--mp-orange); font-weight:700; letter-spacing:-.04em; line-height:.9}
+.topic .name {font-size:32px; font-weight:700; line-height:1.05}
+.eyebrow {font-size:22px; color:var(--mp-orange); font-weight:700; letter-spacing:.12em; text-transform:uppercase}
+.dark .eyebrow {color:var(--mp-soft)}
+h1,h2,h3,p {margin:0}
+h1 {font-size:150px; font-weight:700; line-height:.92; letter-spacing:-.05em}
+h2 {font-size:64px; font-weight:700; line-height:1.02; letter-spacing:-.025em; color:var(--mp-heading)}
+.dark h2 {color:white}
+h3 {font-size:32px; line-height:1.15; font-weight:700}
+em {color:var(--mp-orange); font-style:normal}
+.lead {font-size:27px; line-height:1.38; color:var(--mp-muted); margin-top:24px; max-width:44ch}
+.dark .lead,.dark .caption {color:rgba(255,255,255,.72)}
+.body {font-size:25px; line-height:1.38}
+.caption {font-size:20px; line-height:1.35; color:var(--mp-muted)}
+.split {display:grid; grid-template-columns:804px 860px; gap:64px; align-items:center; height:750px}
+.split h2 {max-width:22ch}
+.bullets {display:grid; gap:24px; margin-top:38px; padding-left:28px; font-size:25px; line-height:1.35}
+.bullets li::marker {color:var(--mp-orange)}
+.visual {height:580px; border-radius:18px; background:white; color:var(--mp-grey); padding:48px; box-shadow:0 30px 70px -34px rgba(0,0,0,.5)}
+.visual.placeholder {border:2px dashed #9A969C; box-shadow:none; display:flex; flex-direction:column; justify-content:center}
+.visual .caption {margin-top:22px; max-width:40ch}
+.cover {padding-top:84px; display:flex; flex-direction:column; justify-content:center}
+.cover h1 {margin:36px 0 0; max-width:16ch}
+.cover .lead {font-size:36px; line-height:1.25; max-width:33ch; color:white; margin-top:38px}
+.section-number {font-size:220px; letter-spacing:-.06em; line-height:1; color:var(--mp-orange); font-weight:700}
+.section-content {display:grid; grid-template-columns:340px 1fr; gap:80px; align-items:center; height:780px}
+.steps {display:grid; grid-template-columns:repeat(4,1fr); gap:60px; margin-top:100px}
+.step {position:relative}
+.step:not(:last-child)::after {content:""; position:absolute; top:41px; left:120px; right:-30px; height:2px; background:#E98A6C}
+.step .circle {width:84px; height:84px; border-radius:50%; background:white; color:var(--mp-orange); display:grid; place-items:center; font-size:32px; font-weight:700; margin-bottom:30px}
+.step.active .circle {background:var(--mp-orange); color:white}
+.step h3 {font-size:28px; margin-bottom:16px}
+.step .caption {max-width:24ch}
+.metrics {display:grid; grid-template-columns:repeat(3,1fr); gap:70px; margin-top:100px}
+.metric {border-top:5px solid var(--mp-orange); padding-top:28px}
+.metric strong {display:block; color:var(--mp-orange); font-size:150px; letter-spacing:-.05em; line-height:1; margin:24px 0}
+.metric h3 {font-size:28px}
+.method {position:absolute; left:96px; bottom:170px; max-width:1550px}
+.comparison {display:grid; grid-template-columns:1fr 1fr; gap:36px; margin-top:60px}
+.comparison .panel {border-top:3px solid #6C686E; padding-top:24px}
+.comparison .panel:last-child {border-color:var(--mp-orange)}
+.comparison h3 {margin-bottom:26px}
+.comparison .visual {height:440px; background:rgba(255,255,255,.06); color:white; border-color:#6C686E}
+.chart-layout {display:grid; grid-template-columns:900px 1fr; gap:64px; margin-top:56px}
+.bars {display:grid; gap:28px; margin-top:32px}
+.bar-row {display:grid; grid-template-columns:100px 1fr 70px; gap:22px; align-items:center; font-size:24px}
+.bar-track {height:46px; background:#E4E2E6}
+.bar-fill {height:100%; width:var(--amount); background:var(--mp-sage)}
+.bar-row:last-child .bar-fill {background:var(--mp-orange)}
+table {border-collapse:collapse; width:100%; font-size:25px}
+th,td {padding:25px 16px; text-align:left; border-bottom:1px solid #C8C5CA}
+th {border-top:4px solid var(--mp-orange); font-weight:700}
+th:last-child,td:last-child {text-align:right}
+.chart-note {margin-top:28px; max-width:65ch}
+.closing {display:flex; flex-direction:column; justify-content:center}
+.closing h2 {font-size:100px; max-width:23ch}
+.closing .lead {font-size:32px; max-width:40ch}
+footer {position:absolute; left:96px; right:96px; bottom:40px; display:flex; align-items:center; gap:40px; font-size:19px; line-height:1.2; color:var(--mp-muted)}
+footer img {height:22px; width:auto; flex:none}
+footer .note {flex:1}
+footer .page {margin-left:auto}
+.dark footer {color:rgba(255,255,255,.62)}
+@media screen and (max-width:1975px) {
+  main {zoom:calc((100vw - 56px) / 1920px)}
+}
+@media print {
+  @page {size:20in 11.25in; margin:0}
+  html,body {background:white}
+  main {display:block; padding:0; zoom:1}
+  .slide {margin:0; break-after:page; page-break-after:always; print-color-adjust:exact; -webkit-print-color-adjust:exact}
+  .slide:last-child {break-after:auto; page-break-after:auto}
+}

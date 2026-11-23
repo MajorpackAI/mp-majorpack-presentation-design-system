@@ -1,0 +1,27 @@
+{
+  "name": "Majorpack Presentation Design System",
+  "version": "0.01",
+  "source": "Corporate presentation version 5; derived rules, not a complete brand manual",
+  "canvas": {"widthPx": 1920, "heightPx": 1080, "aspectRatio": "16:9", "pptxWidthInches": 13.3333333333, "pptxHeightInches": 7.5, "pxPerPointAtThisSize": 2},
+  "colors": {
+    "brand": {"orange": "#D43E17", "grey": "#3A373B", "black": "#000000", "white": "#FFFFFF"},
+    "slide": {"light": "#F4F2EE", "dark": "#141518", "headingLight": "#1C1A1D", "mutedLight": "#6C686E", "accentOnDark": "#F5A48B", "accentWash": "#FCF1EC"},
+    "secondary": {"paleBlue": "#76A1C0", "sage": "#9B9D8F"},
+    "chart": ["#D43E17", "#9B9D8F", "#76A1C0", "#22303A", "#C3D6E4", "#444A30", "#4A3B30", "#D2BBAF", "#F4BB58"]
+  },
+  "typography": {
+    "primary": "Aeroport",
+    "portableFallback": "Arial",
+    "fontFilesIncluded": false,
+    "weights": [400, 500, 700],
+    "sizePx": {"cover": 150, "heading": 64, "topicNumber": 66, "topicName": 32, "lead": 27, "body": 25, "caption": 20, "metric": 70, "heroMetric": 150, "footer": 19},
+    "sizePtAtSpecifiedPptxSize": {"cover": 75, "heading": 32, "topicNumber": 33, "topicName": 16, "lead": 13.5, "body": 12.5, "caption": 10, "metric": 35, "heroMetric": 75, "footer": 9.5},
+    "lineHeight": {"cover": 0.92, "heading": 1.02, "body": 1.38},
+    "trackingEm": {"cover": -0.05, "heading": -0.025}
+  },
+  "layoutPx": {"left": 96, "right": 96, "top": 66, "coverTop": 84, "bottomReserve": 112, "columnGap": 64, "visualWidth": 860, "footerBottom": 40, "logoHeight": 22},
+  "image": {"cornerRadiusPx": 18, "preserveAspectRatio": true},
+  "layouts": ["cover", "section", "split", "process", "metrics", "comparison", "chart-table", "closing"],
+  "dataPolicy": {"preserveFacts": true, "preserveUnits": true, "preserveSources": true, "inventFacts": false, "sampleChartValuesAreFictional": true},
+  "referenceFallback": "Use the same geometry and colors with Arial, then reflow and inspect every slide."
+}
